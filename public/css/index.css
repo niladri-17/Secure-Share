@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+ 
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 255, 251);
+}
+
+form {
+    margin: 0 auto;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* flex-direction: column; */
+}
+ 
