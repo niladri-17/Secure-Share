@@ -20,14 +20,13 @@ app.get("/", (req, res) => {
   res.render("index")
 })
 
-app.get("/views/subscription.ejs", (req, res) => {
+app.get("/subscription.ejs", (req, res) => {
   res.render("subscription")
 })
 
-app.get("/views/aboutUs.ejs", (req, res) => {
+app.get("/aboutUs.ejs", (req, res) => {
   res.render("aboutUs")
 })
-
 
 
 app.post("/upload", upload.single("file"), async (req, res) => {

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -18,7 +18,7 @@ nav {
   padding: 5px;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   /* background-color: var(--nav-color); */
   padding: 5px 2.5%;
   position: sticky;
@@ -27,32 +27,46 @@ nav {
   /* background: rgba(0, 0, 0, 0.743); */
   /* border: 2px solid black; */
   /* border-radius: 30px; */
-  border-bottom: 2px solid  rgb(79, 79, 79);
+  border-bottom: 2px solid rgb(79, 79, 79);
 }
 
-.nav-left{
-  /* width: 25%; */
+.nav-left {
+  width: 25%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.nav-right{
+.nav-mid {
   width: 25%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 20px;
 }
 
-.nav-right a:hover{
+.nav-mid a:hover {
   border-bottom: 2px solid white;
 }
 
-.nav-right img:hover{
+.home-active {
+  border-bottom: 2px solid white;
+}
+
+.home-active:hover {
   border-bottom: none;
 }
 
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+
+.nav-right img:hover {
+  border-bottom: none;
+}
 
 nav a {
   color: white;
@@ -61,7 +75,7 @@ nav a {
   align-items: center;
 }
 
-nav img{
+nav img {
   height: 30px;
   width: 30px;
   margin: 5px;
@@ -116,8 +130,10 @@ nav img{
   font-size: 1.2rem;
   font-weight: 500;
   border-radius: 50px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: none;
   cursor: pointer;
+  background-color: yellow;
 }
 
 .submit > button:hover {
@@ -139,11 +155,11 @@ nav img{
   margin: 10px;
 }
 
-.share-link a{
+.share-link a {
   color: white;
 }
 
-.share-link a:hover{
+.share-link a:hover {
   color: rgb(83, 83, 255);
 }
 

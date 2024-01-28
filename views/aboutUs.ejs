@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
     <style>
-        *{
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            /* margin: 20px; */
-            color: #666;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      @import url(../public/css/index.css);
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        header {
-            color:black;
-            text-align: center;
-            padding: 20px;
-            background-color: #f4f4f4;
-            margin-bottom: 5px;
-        }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        color: white;
+      }
 
-        section {
-            max-width: 800px;
-            margin: auto;
-        }
+      .aboutUs-active {
+        border-bottom: 2px solid white;
+      }
 
-        h2 {
-            padding: 5px 0;
-            color: #333;
-        }
+      .aboutUs-active:hover {
+        border-bottom: none;
+      }
 
-        p {
-            padding: 5px 0;
-            color: #666;
-        }
-        .team {
-            display: flex;
-        }
-        .team p{
-            width: 50%;
-        }
-        .team-left , .team-right{
-            width: 50%;
-            font-weight: 600;
-        }
+      .home-active {
+        border-bottom: none;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      section {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h2 {
+        padding: 5px 0;
+        /* color: #333; */
+      }
+
+      p {
+        padding: 5px 0;
+        /* color: #666; */
+      }
+      .team {
+        display: flex;
+      }
+      .team p {
+        width: 50%;
+      }
+      .team-left,
+      .team-right {
+        width: 50%;
+        font-weight: 600;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav-left">
+        <a href="/"
+          ><img
+            src="../public/assets/secure-logo.jpeg"
+            alt="secure share logo"
+          /><span href="/" class="logo">Secure Share</span></a
+        >
+      </div>
+      <div class="nav-mid">
+        <span class="home-active"><a href="/">Home</a></span>
+        <span class="subscription-active"
+          ><a href="./subscription.ejs">Subscription</a></span
+        >
+        <span class="aboutUs-active"><a href="/aboutUs.ejs">About Us</a></span>
+      </div>
+      <div class="nav-right">
+        <a href="#"
+          ><img src="../public/assets/user-icon.png" alt="secure share logo"
+        /></a>
+      </div>
+    </nav>
 
     <header>
-        <h1>About Us</h1>
+      <h1>About Us</h1>
     </header>
 
     <section>
+      <h2>Our Mission</h2>
+      <p>
+        In an era dominated by data breaches and privacy concerns, we envisioned
+        a platform that would redefine the standards of secure file sharing. We
+        wanted to empower users with a tool that not only prioritizes
+        confidentiality but also streamlines the entire sharing process.
+      </p>
 
-        <h2>Our Mission</h2>
-        <p>In an era dominated by data breaches and privacy concerns, we envisioned a platform that would redefine the standards of secure file sharing. We wanted to empower users with a tool that not only prioritizes confidentiality but also streamlines the entire sharing process.</p>
-        
-        <h2>Key Features</h2>
-        
-            <ul>
-                <li>User-Friendly Interface: While security is paramount, we understand the importance of a user-friendly experience. Secure Share boasts an intuitive interface, making it easy for both tech-savvy professionals and casual users to navigate the platform effortlessly.</li>
-                <li>Seamless Collaboration: File sharing shouldn’t be a cumbersome process. With [Your Secure Share, collaboration is seamless. Whether you're working on a team project or sharing sensitive documents, our platform facilitates efficient and secure collaboration.</li>
-            </ul>   
-        
+      <h2>Key Features</h2>
 
-        <h2>Meet the Team</h2>
-        <div class="team">
-            <div class="team-left">
-                <p>Niladri Basak</p>
-                <p>Subham Biswas</p>
-                <p>Aritra Sarkar</p>
-            </div>
-            <div class="team-right">
-                <p>Shivaditya Som</p>
-                <p>Sneha Debnath</p>
-                <p>Disha Gupta</p>
-            </div>
+      <ul>
+        <li>
+          User-Friendly Interface: While security is paramount, we understand
+          the importance of a user-friendly experience. Secure Share boasts an
+          intuitive interface, making it easy for both tech-savvy professionals
+          and casual users to navigate the platform effortlessly.
+        </li>
+        <li>
+          Seamless Collaboration: File sharing shouldn’t be a cumbersome
+          process. With [Your Secure Share, collaboration is seamless. Whether
+          you're working on a team project or sharing sensitive documents, our
+          platform facilitates efficient and secure collaboration.
+        </li>
+      </ul>
+
+      <h2>Meet the Team</h2>
+      <div class="team">
+        <div class="team-left">
+          <p>Niladri Basak</p>
+          <p>Subham Biswas</p>
+          <p>Aritra Sarkar</p>
         </div>
-        
-
+        <div class="team-right">
+          <p>Shivaditya Som</p>
+          <p>Sneha Debnath</p>
+          <p>Disha Gupta</p>
+        </div>
+      </div>
     </section>
-
-</body>
-
+  </body>
 </html>
