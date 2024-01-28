@@ -17,7 +17,6 @@
       body {
         height: 100%;
         width: 100%;
-        color: white;
       }
 
       .aboutUs-active {
@@ -32,8 +31,10 @@
         border-bottom: none;
       }
 
-      header {
-        text-align: center;
+      p,
+      li {
+        padding: 5px 0;
+        color: rgba(239, 239, 239, 0.691);
       }
 
       section {
@@ -42,24 +43,33 @@
       }
 
       h2 {
+        /* text-align: center; */
+        margin: 20px 0;
         padding: 5px 0;
-        /* color: #333; */
+        color: white;
       }
 
-      p {
-        padding: 5px 0;
-        /* color: #666; */
+      .team-heading{
+        /* text-align: center; */
       }
+
       .team {
         display: flex;
       }
+
       .team p {
-        width: 50%;
+        /* text-align: center; */
       }
+
       .team-left,
       .team-right {
         width: 50%;
         font-weight: 600;
+      }
+
+      footer p {
+        padding: 0;
+        color: #7a7a7a;
       }
     </style>
   </head>
@@ -89,10 +99,6 @@
       </div>
     </nav>
 
-    <header>
-      <h1>About Us</h1>
-    </header>
-
     <section>
       <h2>Our Mission</h2>
       <p>
@@ -119,7 +125,7 @@
         </li>
       </ul>
 
-      <h2>Meet the Team</h2>
+      <h2 class="team-heading">Meet the Team</h2>
       <div class="team">
         <div class="team-left">
           <p>Niladri Basak</p>
@@ -133,5 +139,9 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <p>Secure Share © 2024</p>
+    </footer>
   </body>
 </html>

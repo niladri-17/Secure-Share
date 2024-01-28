@@ -26,9 +26,8 @@ body {
 
 .title {
   text-align: center;
-  margin: 10px auto 50px auto;
+  margin: 50px 0;
   /* z-index: 1; */
-  margin-top: 50px;
   color: white;
 }
 
@@ -127,4 +126,10 @@ button {
 
 button:hover {
   background: #47cf73;
+}
+
+
+footer p {
+  margin: 0;
+  font-size: 15px;
 }
