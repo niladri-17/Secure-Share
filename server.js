@@ -15,9 +15,20 @@ mongoose.connect(process.env.DATABASE_URL)
 app.use("/public", express.static("public"));
 app.set("view engine", "ejs")
 
+
 app.get("/", (req, res) => {
   res.render("index")
 })
+
+app.get("/views/subscription.ejs", (req, res) => {
+  res.render("subscription")
+})
+
+app.get("/views/aboutUs.ejs", (req, res) => {
+  res.render("aboutUs")
+})
+
+
 
 app.post("/upload", upload.single("file"), async (req, res) => {
   const fileData = {

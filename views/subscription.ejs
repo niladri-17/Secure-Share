@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Subscription Plan</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        background-color: rgb(0, 0, 0);
+      }
+
+      .title {
+        text-align: center;
+        margin: 10px auto 50px auto;
+        z-index: 1;
+        margin-top: 50px;
+        color: white;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      h3 {
+        margin-top: 40px;
+      }
+
+      p {
+        margin: 20px 30px;
+        font-size: 16px;
+      }
+
+      small {
+        font-size: 12px;
+        color: gray;
+      }
+
+      .small-colored {
+        color: #47cf73;
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .offers {
+        position: relative;
+        text-align: center;
+        background: #fff;
+        padding: 1%;
+        margin: 10px;
+        width: 300px;
+        /* height: 5rem; */
+        top: 0;
+        border: 1px solid #eaeaea;
+        z-index: 1;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .offers:hover {
+        position: relative;
+        top: -20px;
+        box-shadow: 0px 14px 6px 0px #262626;
+        cursor: pointer;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
+      .offers:nth-child(2) {
+        border-top: 2px solid #47cf73;
+        box-shadow: 0 0 10px 0px #0000001c;
+      }
+
+      .offers:nth-child(2) h3 {
+        margin-top: 20px;
+      }
+
+      .offers:nth-child(2):hover {
+        box-shadow: 0px 14px 6px 0px #262626;
+        /* box-shadow: 0px 14px 6px 0px #0000004d; */
+      }
+
+      button {
+        font-size: 22px;
+        font-weight: 500;
+        background: #0ebeff;
+        color: #fff;
+        margin: 30px auto 20px auto;
+        padding: 4% 8%;
+        border: 0;
+        transition-duration: 0.5s;
+      }
+
+      button:hover {
+        background: #47cf73;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Subscription Plans</h1>
+    <div class="container">
+      <div class="offers">
+        <h2>Free</h2>
+        <h3 class="price">Rs. 0</h3>
+        <small>Monthly</small>
+        <p>Up to 3 File Shares</p>
+        <p>Maximum File Size 100MB</p>
+        <p></p>
+        <button>Subscribe</button>
+      </div>
+      <div class="offers">
+        <h2>Premium</h2>
+        <small class="small-colored">Best offer!</small>
+        <h3 class="price">Rs. 399</h3>
+        <small>Monthly</small>
+        <p>Unlimited File Sharing</p>
+        <p>Maximum File Size 5GB</p>
+        <p></p>
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </body>
+</html>
