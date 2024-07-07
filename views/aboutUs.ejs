@@ -3,6 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7dc99611d3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/assets/newfavicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/assets/newfavicon.png"
+    />
+
     <title>About Us</title>
     <style>
       @import url(../public/css/index.css);
@@ -10,7 +33,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Quicksand", sans-serif;
       }
 
       html,
@@ -20,9 +43,11 @@
       }
 
       .aboutUs-active {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid #b87c4c;
       }
-
+      ul {
+        list-style: none;
+      }
       .aboutUs-active:hover {
         border-bottom: none;
       }
@@ -49,16 +74,15 @@
         color: white;
       }
 
-      .team-heading{
-        /* text-align: center; */
-      }
+      /* .team-heading{
+  /* text-align: center; */
 
       .team {
         display: flex;
       }
 
       .team p {
-        /* text-align: center; */
+        text-align: center;
       }
 
       .team-left,
@@ -79,10 +103,8 @@
     <nav>
       <div class="nav-left">
         <a href="/"
-          ><img
-            src="../public/assets/secure-logo.jpeg"
-            alt="secure share logo"
-          /><span href="/" class="logo">Secure Share</span></a
+          ><span class="logo2"><i class="fa-brands fa-keycdn"></i> </span
+          ><span href="/" class="logo">Secure Share</span></a
         >
       </div>
       <div class="nav-mid">
@@ -94,13 +116,15 @@
       </div>
       <div class="nav-right">
         <a href="#"
-          ><img src="../public/assets/user-icon.png" alt="secure share logo"
+          ><img
+            src="../public/assets/defaultpfpsec.jpg"
+            alt="secure share logo"
         /></a>
       </div>
     </nav>
 
     <section>
-      <h2>Our Mission</h2>
+      <h2 style="background-color: #4f4f4f; padding-left: 10px">Our Mission</h2>
       <p>
         In an era dominated by data breaches and privacy concerns, we envisioned
         a platform that would redefine the standards of secure file sharing. We
@@ -108,7 +132,9 @@
         confidentiality but also streamlines the entire sharing process.
       </p>
 
-      <h2>Key Features</h2>
+      <h2 style="background-color: #4f4f4f; padding-left: 10px">
+        Key Features
+      </h2>
 
       <ul>
         <li>
@@ -119,13 +145,18 @@
         </li>
         <li>
           Seamless Collaboration: File sharing shouldn’t be a cumbersome
-          process. With [Your Secure Share, collaboration is seamless. Whether
-          you're working on a team project or sharing sensitive documents, our
-          platform facilitates efficient and secure collaboration.
+          process. With Secure Share, collaboration is seamless. Whether you're
+          working on a team project or sharing sensitive documents, our platform
+          facilitates efficient and secure collaboration.
         </li>
       </ul>
 
-      <h2 class="team-heading">Meet the Team</h2>
+      <h2
+        class="team-heading"
+        style="background-color: #4f4f4f; padding-left: 10px"
+      >
+        Meet the Team
+      </h2>
       <div class="team">
         <div class="team-left">
           <p>Niladri Basak</p>
