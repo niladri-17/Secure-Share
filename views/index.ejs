@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../public/css/index.css" />
+    <title>Secure Share</title>
+  </head>
+  <body>
+  
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav-left">
+        <a href="/"><img src="../public/assets/secure-logo.jpeg" alt="secure share logo" ><span href="/" class="logo">Secure Share</span></a>
+      </div>
+      <div class="nav-mid">
+        <span class="home-active"><a href="/">Home</a></span>
+        <span class="subscription-active"><a href="./subscription.ejs">Subscription</a></span>
+        <span class="aboutUs-active"><a href="/aboutUs.ejs">About Us</a></span>
+      </div>
+      <div class="nav-right">
+        <a href="#"><img src="../public/assets/user-icon.png" alt="secure share logo" ></a>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+  <div class="main">
+    <div class="form">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="file">
+            <label for="file"></label>
+            <span>Choose your File</span>
+            <input type="file" id="file" name="file" class="drag-drop" required />
+        </div>
+        <div class="password">
+          <label for="password"></label>
+          <span>Password</span>
+          <input type="password" id="password" name="password" placeholder=" use strong password" minlength="8"/>
+        </div>
+        <div class="submit">
+          <button type="submit">Share</button>
+        </div>
+      </form> 
+    </div>
+        <!-- SHARING LINK -->
+
+        <div class="share-link">
+          <% if (locals.fileLink != null) { %>
+            <div>
+              Your file is uploaded to:
+              <a href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+            </div>
+          <% } %>
+        </div>
+  </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>Secure Share © 2024</p>
+    </footer>
+  </body>
+</html>
+
