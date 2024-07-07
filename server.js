@@ -38,11 +38,11 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/subscription.ejs", (req, res) => {
+app.get("/subscription", (req, res) => {
   res.render("subscription");
 });
 
-app.get("/aboutUs.ejs", (req, res) => {
+app.get("/aboutUs", (req, res) => {
   res.render("aboutUs");
 });
 
