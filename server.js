@@ -15,6 +15,7 @@ app.use("/public", express.static(path.join(__dirname, 'public')));
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
+// S3 Client Configuration
 const s3Client = new S3Client({
   region: process.env.AWS_REGION,
   credentials: {
@@ -23,8 +24,10 @@ const s3Client = new S3Client({
   },
 });
 
+// Multer Configuration
 const upload = multer({
-  storage: multer.memoryStorage(), // use memory storage for easier S3 upload
+  storage: multer.memoryStorage(),  // For large files, consider changing this to disk storage
+  limits: { fileSize: 10 * 1024 * 1024 }  // Increase the file size limit to 10 MB
 });
 
 mongoose.connect(process.env.DATABASE_URL, {
@@ -36,6 +39,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   console.error("Failed to connect to MongoDB", err);
 });
 
+// Routes
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -56,6 +60,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
       Body: req.file.buffer,
     };
 
+    // Upload file to S3
     const parallelUploads3 = new Upload({
       client: s3Client,
       params: uploadParams,
@@ -63,6 +68,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 
     await parallelUploads3.done();
 
+    // Save file metadata to MongoDB
     const fileData = {
       path: uploadParams.Key,
       originalName: req.file.originalname,
@@ -112,5 +118,6 @@ async function handleDownload(req, res) {
   }
 }
 
+// Start the Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
